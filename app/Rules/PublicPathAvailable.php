@@ -18,7 +18,7 @@ class PublicPathAvailable implements ValidationRule
         if (! is_string($value)
             || $value === '/'
             || preg_match('/[\\x00-\\x20\\x7f?#\\\\]/u', $value)
-            || preg_match('#^/(?:en|admin|install|search|assets|build|uploads)(?:/|$)#i', $value)) {
+            || preg_match('#^/(?:en|admin|search|assets|build|uploads)(?:/|$)#i', $value)) {
             $fail('The :attribute must be a safe, non-reserved public path.');
             return;
         }
