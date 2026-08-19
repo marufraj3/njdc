@@ -1,0 +1,7 @@
+@php $shareUrl = urlencode(request()->fullUrl()); @endphp
+<section class="widget social-content-share-widget"><div><p class="social-content-share-widget-title">{{ __('Click to share this content') }}</p><div class="social-content-share-widget-social-icons">
+    <a class="social-content-share-widget-social-icons-link" href="https://www.facebook.com/sharer/sharer.php?u={{ $shareUrl }}" rel="noopener" target="_blank" title="Facebook"><i class="ph-fill ph-facebook-logo social-content-share-widget-fb-icon"></i></a>
+    <a class="social-content-share-widget-social-icons-link" href="https://twitter.com/intent/tweet?url={{ $shareUrl }}" rel="noopener" target="_blank" title="X"><i class="ph ph-x-logo social-content-share-widget-twitter-icon"></i></a>
+    <a class="social-content-share-widget-social-icons-link" href="https://wa.me/?text={{ $shareUrl }}" rel="noopener" target="_blank" title="WhatsApp"><i class="ph-fill ph-whatsapp-logo social-content-share-widget-whatsapp-icon"></i></a>
+    <a class="social-content-share-widget-social-icons-link" href="https://www.linkedin.com/sharing/share-offsite/?url={{ $shareUrl }}" rel="noopener" target="_blank" title="LinkedIn"><i class="ph-fill ph-linkedin-logo social-content-share-widget-linkedin-icon"></i></a>
+</div></div><div><p class="social-content-share-widget-title"></p><a class="eps-opinion-btn" href="{{ $localizedUrl('/forms/form/feedback-forms') }}"><span>{{ __('Give your opinion') }}</span><i class="ph ph-chat-circle-text"></i></a></div></section>

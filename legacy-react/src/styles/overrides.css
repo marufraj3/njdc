@@ -1,0 +1,61 @@
+/* ---- small fidelity fixes for rich-text (CKEditor) content ---- */
+rt-renderer {
+  display: block;
+}
+rt-renderer img,
+.block-widget-content img,
+.title-with-image-content-widget rt-renderer img {
+  max-width: 100%;
+  height: auto;
+}
+rt-renderer figure {
+  margin: 0 auto;
+  max-width: 100%;
+}
+rt-renderer iframe,
+rt-renderer table,
+rt-renderer object {
+  max-width: 100%;
+}
+rt-renderer table {
+  border-collapse: collapse;
+}
+rt-renderer table td,
+rt-renderer table th {
+  padding: 4px;
+}
+
+/* news ticker: JS-driven in the original site */
+.news-card-widget .news-card-widget-ticker a.ticker-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.error-widget {
+  text-align: center;
+  padding: 64px 16px;
+}
+.error-widget .error-header {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.datatable-widget-header {
+  font-size: var(--typography-h2-font-size);
+  font-weight: var(--typography-h4-font-weight);
+  margin: 0 0 var(--spacing-small) 0;
+}
+
+.social-content-share-widget-social-icons {
+  display: flex;
+  gap: 8px;
+  font-size: 22px;
+}
+.social-content-share-widget-social-icons a {
+  color: inherit;
+  text-decoration: none;
+}
+.social-content-share-widget-fb-icon { color: #3b5998; }
+.social-content-share-widget-twitter-icon { color: #000; }
+.social-content-share-widget-whatsapp-icon { color: #25d366; }
+.social-content-share-widget-linkedin-icon { color: #0077b5; }
