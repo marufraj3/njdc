@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Middleware\EnsureInstalled;
 use App\Http\Middleware\RequireRole;
 use App\Http\Middleware\SecurityHeaders;
 use App\Http\Middleware\SetLocale;
@@ -17,7 +16,6 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withMiddleware(function (Middleware $middleware): void {
         $middleware->append(SecurityHeaders::class);
         $middleware->alias([
-            'installed' => EnsureInstalled::class,
             'locale' => SetLocale::class,
             'role' => RequireRole::class,
         ]);
